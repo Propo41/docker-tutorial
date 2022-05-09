@@ -10,6 +10,9 @@ services:
       - .:/app
     links:
       - mongodb
+    env_file:
+      - .env.development
+    #command: ["npm", "start"]
 
   mongodb:
     image: mongo:latest

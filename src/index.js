@@ -3,9 +3,10 @@ require("dotenv").config();
 const Point = require("./models/Point");
 const mongoose = require("mongoose");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 const mongoUri = process.env.MONGO_URI;
 
+console.log(port);
 console.log(mongoUri);
 // connect to mongo
 mongoose
