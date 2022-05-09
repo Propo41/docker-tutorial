@@ -9,9 +9,9 @@ RUN yarn install --pure-lockfile
 # note that node_modules will be copied as well. That's why we ignore it in the .dockerignore file
 COPY . .
 
-ENV PORT=3000
-ENV DUMMY=DUMMY
+ENV PORT=5000
+ENV MONGO_URI=mongodb://localhost:27017/test1
 
-EXPOSE 3000 
+EXPOSE 5000 
 
 CMD ["npm", "start"]
