@@ -8,8 +8,6 @@ services:
     working_dir: /app
     volumes:
       - .:/app
-    links:
-      - mongodb
     env_file:
       - .env.development
     command: ["npm", "test"]
