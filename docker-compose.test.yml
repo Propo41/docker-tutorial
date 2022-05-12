@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    ports:
+      - ${PORT}:${PORT}
+    working_dir: /app
+    volumes:
+      - .:/app
+    links:
+      - mongodb
+    env_file:
+      - .env.development
+    command: ["npm", "test"]
